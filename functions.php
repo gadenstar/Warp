@@ -155,3 +155,11 @@ function devework_replace_open_sans() {
 }
 add_action( 'wp_enqueue_scripts', 'devework_replace_open_sans' );
 add_action('admin_enqueue_scripts', 'devework_replace_open_sans');
+
+
+function v7v3_get_avatar($avatar) {
+    $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),
+"cd.v7v3.com",$avatar);
+    return $avatar;
+}
+add_filter( 'get_avatar', 'v7v3_get_avatar', 10, 3 );
