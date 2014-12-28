@@ -100,6 +100,9 @@ add_action( 'widgets_init', 'warp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function warp_scripts() {
+	wp_enqueue_style( 'uikit-style', get_template_directory_uri() . '/inc/css/uikit.min.css' );
+	wp_enqueue_style( 'flat-style', get_template_directory_uri() . '/inc/css/uikit.almost-flat.min.css' );
+
 	wp_enqueue_style( 'warp-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'warp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
